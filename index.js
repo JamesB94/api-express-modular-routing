@@ -15,6 +15,14 @@ const usersRouter = require("./src/routers/users");
 
 // ADD ROUTERS TO APP
 
+const userRouter = require('./src/routers/users')
+app.use('/users', userRouter)
+
+const booksRouter = require('./src/routers/books')
+app.use('/books', booksRouter )
+
+const filmRouter = require('./src/routers/films')
+app.use('/films', filmRouter )
 
 /* START SERVER */
 app.listen(port, () => {
